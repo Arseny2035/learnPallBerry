@@ -1,18 +1,6 @@
-import math
+def sort_array(source_array):
+    odds = sorted((x for x in source_array if x % 2 == 1), reverse=True)
+    return [x if x % 2 == 0 else odds.pop() for x in source_array]
 
 
-def get_middle(s):
-    print(s)
-    print('math.floor(len(s)/2) = ', math.floor(len(s)/2))
-    print('math.ceil(len(s)/2) = ', math.ceil(len(s)/2))
-    return s[math.ceil(len(s)/2)-1:math.floor(len(s)/2)+1]
-
-
-
-# your code here
-
-print(get_middle("test"))
-print(get_middle("testing"))
-print(get_middle("middle"))
-print(get_middle("A"))
-print(get_middle("of"))
+print(sort_array([5, 1, 2, 8, 3, 4]))

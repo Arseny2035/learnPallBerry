@@ -1,3 +1,14 @@
+import re
+def to_camel_case(text):
+    result = ''
+    if len(text) > 0:
+        result = text.title().replace('-', '').replace('_','')
+
+    return print(result)
+
+
+to_camel_case('the-stealth-warrior')
+to_camel_case('A-B-C')
 def get_event_date(event):
     return event.date
 
